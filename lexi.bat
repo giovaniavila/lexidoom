@@ -1,12 +1,12 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-rem 
-set "palavras[0]=sinistro"
-set "palavras[1]=cabo"
-set "palavras[2]=helio"
-set "palavras[3]=viciado"
-set "palavras[4]=ratatouille"
+rem Palavras codificadas em base64
+set "palavras[0]=c2luc3RybwpzZXQgIHBhbHdhcmFzWzBdPQ=="
+set "palavras[1]=Y2FibwpoZWxpbwp2aWNpYWRvPw=="
+set "palavras[2]=aGVsaW8="
+set "palavras[3]=dmljYWFkbw=="
+set "palavras[4]=cmF0YXRvdWlsbGVl"
 
 rem 
 set /a "indice= %random% %% 5"
@@ -63,6 +63,7 @@ for /L %%i in (0,1,!tempo!) do (
     )
 )
 
+rem 
 if "!palavra_oculta!" equ "!palavra!" (
     echo Parabéns! Você venceu!
     goto :end
